@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "6148afcc-8dd8-47de-96a8-f7945d084657",
+		"name": "Homework1_RequestCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Neue Spalte \"Nummer\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nummer\",\n    \"description\": \"Identifikationsnummer\",\n    \"datatype\": \"i\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/column/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"column",
+						""
+					]
+				},
+				"description": "Post a new column for ID-Numbers"
+			},
+			"response": []
+		},
+		{
+			"name": "Neue Spalte \"Name\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Name\",\n    \"description\": \"Name\",\n    \"datatype\": \"s\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/column/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"column",
+						""
+					]
+				},
+				"description": "Post the new column \"Name\""
+			},
+			"response": []
+		},
+		{
+			"name": "Neue Tabelle \"Studenten\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Studenten\",\n    \"content\": \"Tabelle aller StudentInnen\",\n    \"create_date\": \"2019-11-12T14:44:32Z\",\n    \"actual_date\": \"2019-11-12T14:44:34Z\",\n    \"columns\": [\n        1,\n        2\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/table/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"table",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Neue Tabelle \"Lehrende\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Lehrende\",\n    \"content\": \"Tabelle aller lehrenden Personen\",\n    \"create_date\": \"2019-11-12T14:44:32Z\",\n    \"actual_date\": \"2019-11-12T14:44:34Z\",\n    \"columns\": [\n        1,\n        2\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/table/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"table",
+						""
+					]
+				},
+				"description": "Neue Tabelle \"Lehrende\""
+			},
+			"response": []
+		},
+		{
+			"name": "Gib alle Tabellen aus",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tables/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tables",
+						""
+					]
+				},
+				"description": "Fragt nach allen Tabellen"
+			},
+			"response": []
+		},
+		{
+			"name": "Ändere Tabelle \"Studenten\" in \"Studentinnen\"",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"StudentInnen\",\n    \"content\": \"Tabelle aller StudentInnen\",\n    \"create_date\": \"2019-11-12T14:44:32Z\",\n    \"actual_date\": \"2019-11-12T14:44:34Z\",\n    \"columns\": [\n        1,\n        2\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/table/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"table",
+						"5"
+					]
+				},
+				"description": "POST new Table to databse"
+			},
+			"response": []
+		},
+		{
+			"name": "Gib Tabelle 1 aus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/table/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"table",
+						"1"
+					]
+				},
+				"description": "Gib Tabelle 1 aus"
+			},
+			"response": []
+		},
+		{
+			"name": "Lösche Tabelle 1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/table/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"table",
+						"1"
+					]
+				},
+				"description": "delete table with id 1"
+			},
+			"response": []
+		},
+		{
+			"name": "Lösche Tabelle 2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/table/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"table",
+						"2"
+					]
+				},
+				"description": "Delete table with id 5"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
